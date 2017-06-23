@@ -15,3 +15,8 @@ def test_n_neg_for_longer_sequences():
 
 def test_n_neg_for_lower_case_sequences():
     assert seq_features.n_neg('acklwttae') == 1
+
+def test_n_neg_for_invalid_amino_acid():
+    with pytest.raises(RuntimeError) as excinfo:
+        seq_features.n_neg('Z')
+    excinfo.match("Z is not a valid amino acid")
