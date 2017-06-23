@@ -1,4 +1,5 @@
 import seq_features
+import pytest
 
 def test_n_neg_for_single_E_or_D():
     """Perform unit tests on n_neg."""
